@@ -1,8 +1,6 @@
 from pyrogram import Client, __version__
-
 from config import Config
 from config import LOGGER
-
 from user import User
 import pyromod.listen
 
@@ -36,3 +34,8 @@ class Bot(Client):
     async def stop(self, *args):
         await super().stop()
         self.LOGGER(__name__).info("Bot stopped. Bye.")
+
+
+# এটা সবশেষে থাকলে কোড কাজ করবে
+if __name__ == "__main__":
+    Bot().run()
